@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import Form from './components/Form';
+import './App.css'
 
 
 const teamMembers = [
-  {name: "Francis", email: "francis@gmail.com", role: "student" },
-  {name: "Patty", email: "patty@gmail.com", role: "asthetician" },
-  {name: "Yerko", email: "yerko@gmail.com", role: "handy-man" }
+  {name: "Francis", email: "francis@gmail.com", role: "student" }
+  
 ]
 
 const initialValues = 
@@ -17,23 +17,30 @@ function App() {
   const [list, setList] = useState(teamMembers);
   const [input, setInput] = useState(initialValues);
 
- 
+
  
   return (
-    <div className="App">
+    <div className="app">
 
-      <Form input = {input} setInput = {setInput} />
-
+      <Form 
+      input = {input} 
+      setInput = {setInput}
+      list = {list}
+      setList = {setList}
+     
+       />
+      <div className="mainBox">
       <h2>Members:</h2>
       {
       list.map((li, index) => {
-      return <div key={index}>
-        Name: {li.name} <br/>
-        email: {li.email} <br/>
-        Role: {li.role}
+      return <div className="main" key={index}>
+        <div className="name">{li.name}</div>
+        <div className="email">{li.email}</div> 
+        <div className="role">{li.role}</div> <br/>
       </div>
       })
     }
+    </div>
       
 
     </div>
