@@ -1,0 +1,40 @@
+
+.app {
+    background-color:yellow;
+    
+}
+
+.mainBox{
+    padding-left: 10%;
+}
+
+h2 {
+    font-size: 40px;
+    color:cornflowerblue;
+
+}
+
+.main {
+    font-size: 30px;
+    background-color: deeppink;
+    width: 40%;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 2%;
+    border: 5px;
+    border-color: forestgreen;
+    border-style: solid;
+    border-radius: 20px;
+    
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.email{
+    color:white;
+    font-weight: bolder;
+
+}
